@@ -63,7 +63,7 @@ The delete operation is not idempotent as by default nothing is returned with a 
 
 ### 3.1
 
-JAX-RS will handle the mismatch by trying to fit Java datatypes into the desired format as much as possible. with formats like `text/plain` this may look like a list converted to a string, or with `application/xml` this may look like variables being matched to tags and values being placed inside said tags.
+JAX-RS will handle the mismatch by trying to fit Java datatypes into the desired format as much as possible. with formats like `text/plain` this may look like a list converted to a string, or with `application/xml` it may look like variables being matched to tags and values being placed inside said tags.
 
 ### 3.2
 

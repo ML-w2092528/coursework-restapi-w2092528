@@ -27,19 +27,24 @@ Context Path: *"/api"*
 
 # Curl commands (can be done with a web browser)
 
-return discovery JSON
+### return discovery JSON
+
 `localhost:8080/api/v1`
 
-return all rooms
+### return all rooms
+
 `localhost:8080/api/v1/rooms`
 
-return room by ID
+### return room by ID
+
 `localhost:8080/api/v1/rooms/{roomId}`
 
-return all sensors
+### return all sensors
+
 `localhost:8080/api/v1/sensors`
 
-return all sensors of a type
+### return all sensors of a type
+
 `localhost:8080/api/v1/sensors?type=(type)`
 
 

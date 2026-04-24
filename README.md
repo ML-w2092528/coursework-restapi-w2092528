@@ -4,7 +4,7 @@ client server architecture coursework. a small REST API that can be used to read
 
 ## Install
 
-### 1. Clone this repo using git (into a directory of your choice
+### 1. Clone this repo using git (into a directory of your choice)
 
 `git clone https://github.com/ML-w2092528/coursework-restapi-w2092528`
 

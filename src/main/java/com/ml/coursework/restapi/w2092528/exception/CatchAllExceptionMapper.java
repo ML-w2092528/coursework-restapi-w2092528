@@ -8,12 +8,14 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
 @Provider
-public class CatchAllExceptionMapper implements ExceptionMapper<Throwable> {
-
+public class CatchAllExceptionMapper extends RuntimeException implements ExceptionMapper<Throwable> {
+    public CatchAllExceptionMapper(){
+        super("An internal error has occurred");
+    }
     @Override
     public Response toResponse(Throwable exception) {
         ErrorMessage errorMessage = new ErrorMessage(
-            "An internal error has occurred", 
+            this.getMessage(), 
             500, 
             "https://myuniversity.edu/api/docs/errors"
         );

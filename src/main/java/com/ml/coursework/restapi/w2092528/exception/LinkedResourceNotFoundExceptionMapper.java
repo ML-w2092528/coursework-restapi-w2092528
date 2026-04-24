@@ -7,10 +7,10 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
 @Provider
-public class LinkedResourceNotFoundExceptionMapper implements ExceptionMapper<ResourceConflictException> {
+public class LinkedResourceNotFoundExceptionMapper implements ExceptionMapper<LinkedResourceNotFoundException> {
 
     @Override
-    public Response toResponse(ResourceConflictException exception) {
+    public Response toResponse(LinkedResourceNotFoundException exception) {
         ErrorMessage errorMessage = new ErrorMessage(
             exception.getMessage(), 
             400, 

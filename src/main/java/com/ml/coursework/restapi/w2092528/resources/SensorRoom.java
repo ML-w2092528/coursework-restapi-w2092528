@@ -28,10 +28,12 @@ public class SensorRoom {
     @Produces(MediaType.APPLICATION_JSON)
     public Room GetRoomById(@PathParam("roomId") String roomId) {
         Room room = roomDAO.getById(roomId);
-        if(room == null){
+        if(room != null){
+            return room;
+        } else {
             throw new LinkedResourceNotFoundException("cannot get a room that does not exist");
         }
-        return room;
+        
     }
     
     @DELETE

@@ -1,15 +1,13 @@
 package com.ml.coursework.restapi.w2092528.resources;
 
 import com.ml.coursework.restapi.w2092528.Sensor;
-import com.ml.coursework.restapi.w2092528.SensorReading;
+import com.ml.coursework.restapi.w2092528.exception.LinkedResourceNotFoundException;
 import com.ml.coursework.restapi.w2092528.dao.Database;
 import com.ml.coursework.restapi.w2092528.dao.GenericDAO;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Path("/sensors")
@@ -39,6 +37,8 @@ public class SensorResource {
     public void addSensor(Sensor sensor){
         if((sensor.getRoomId()  != null) && SensorRoom.checkRoomExistance(sensor.getRoomId())){
             sensorDAO.add(sensor);
+        } else {
+            throw new LinkedResourceNotFoundException("cannot bind a sensor to a room that doesn't exist");
         }
     }
     

@@ -7,6 +7,7 @@ import com.ml.coursework.restapi.w2092528.SensorReading;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class Database {
     public static final List<Room> ROOMS = new ArrayList<>();
@@ -15,8 +16,8 @@ public class Database {
 
     static {
         // Initialise Rooms
-        ROOMS.add(new Room("LIB-301", "Library", 10));
-        ROOMS.add(new Room("STU-103", "Study", 6));
+        ROOMS.add(new Room("LIB-301", "Library", 10, Arrays.asList(new String[]{"TEMP-001"})));
+        ROOMS.add(new Room("STU-103", "Study", 6, Arrays.asList(new String[]{"CO2-002"}))); 
 
         // Initialise Sensors
         SENSORS.add(new Sensor("TEMP-001", "Temperature", "LIB-301"));

@@ -6,16 +6,17 @@ import com.ml.coursework.restapi.w2092528.Sensor;
 import com.ml.coursework.restapi.w2092528.exception.SensorUnavailableException;
 import com.ml.coursework.restapi.w2092528.dao.Database;
 import com.ml.coursework.restapi.w2092528.dao.GenericDAO;
+import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import java.util.List;
 
-
+@Path("/sensor/{sensorId}")
 public class SensorReadingResource {
     private static GenericDAO<SensorReading> sensorReadingDAO = new GenericDAO<>(Database.SENSORREADINGS);
     private String sensorId;
-    
-    public SensorReadingResource(String sensorId){
+    @JsonbCreator
+    public SensorReadingResource(@PathParam("sensorId") String sensorId){
         this.sensorId = sensorId;
     }
     

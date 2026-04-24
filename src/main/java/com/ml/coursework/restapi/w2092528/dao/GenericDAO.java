@@ -17,7 +17,7 @@ public class GenericDAO<T extends BaseModel> {
 
     public T getById(String id) {
         for (T item : items) {
-            if (item.getId() == id) {
+            if (id.equals(item.getId())) {
                 return item;
             }
         }
@@ -39,6 +39,6 @@ public class GenericDAO<T extends BaseModel> {
     }
 
     public void delete(String id) {
-        items.removeIf(item -> item.getId() == id);
+        items.removeIf(item -> item.getId().equals(id));
     }
 }

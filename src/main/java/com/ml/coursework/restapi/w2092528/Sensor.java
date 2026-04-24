@@ -1,5 +1,7 @@
 package com.ml.coursework.restapi.w2092528;
 
+import jakarta.json.bind.annotation.JsonbCreator;
+
 public class Sensor implements BaseModel{
 private String id; // Unique identifier , e.g., "TEMP -001"
 private String type; // Category , e.g., " Temperature ", "Occupancy ", "CO2"
@@ -7,6 +9,7 @@ private String status; // Current state: "ACTIVE ", "MAINTENANCE ", or " OFFLINE
 private double currentValue ; // The most recent measurement recorded
 private String roomId; // Foreign key linking to the Room where the sensor is located .
 // Constructors , getters , setters ...
+@JsonbCreator
 public Sensor(String id, String type, String roomId){
     this.id = id;
     this.type = type;

@@ -4,19 +4,19 @@ client server architecture coursework. a small REST API that can be used to read
 
 ## Install
 
-# 1. Clone this repo using git (into a directory of your choice
+### 1. Clone this repo using git (into a directory of your choice
 
 `git clone https://github.com/ML-w2092528/coursework-restapi-w2092528`
 
-# 2. install a glassfish server
+### 2. install a glassfish server
 
 open **apache netbeans**, navigate to *tools* -> *servers* -> *add server* -> *glassfish server* -> accept the agreement and download *glassfish server 7.0.3* -> *next* -> setup a domain (recommend leaving username and password blank)
 
-# 3. open the project in netbeans
+### 3. open the project in netbeans
 
 navigate to *file* -> *open project...* -> find the directory that you cloned the repo in -> *open project*
 
-# 4. configuration check
+### 4. configuration check
 
 once the project is open right click the project in netbeans -> *properties* -> *Run* -> check the following settings:
 

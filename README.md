@@ -21,7 +21,9 @@ navigate to *file* -> *open project...* -> find the directory that you cloned th
 once the project is open right click the project in netbeans -> *properties* -> *Run* -> check the following settings:
 
 Server: *glassfish server* (this will have a unique name, please use the one created earlier)
+
 Java EE Version: *Jakarta EE 10 Web*
+
 Context Path: *"/api"*
 
 
